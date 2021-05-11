@@ -77,7 +77,7 @@ public class ZooKeePerDemo {
     public void ListenNodesChange() throws IOException {
         //当节点目录发送变化时，会自动调用这个方法,参数1:父节点名称,参数2:父节点中的所有子节点名称
         zkClient.subscribeChildChanges("/node1", new IZkChildListener() {
-            @Override
+
             public void handleChildChange(String nodeName, List<String> list) throws Exception {
                 System.out.println("父节点名称:"+nodeName);
                 System.out.println("发生变更后字节孩子节点名称:");
